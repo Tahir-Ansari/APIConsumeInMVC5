@@ -1,0 +1,30 @@
+﻿@model ConsumeAPI.Models.Cats
+
+
+<style>
+    @@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Rubik&display=swap');
+
+    p {
+        font-family: 'Rubik', sans-serif;
+    }
+</style>
+
+
+<div class="container">
+<div class="card" style="margin-top:20px;font-size:16px;">
+    <div class="card-header text-info" style="font-weight: bolder;">
+        Facts About Cat
+    </div>
+    <div class="card-body">
+        <blockquote class="blockquote mb-0">
+            <p>@Model.Fact</p>
+            <footer class="blockquote-footer"> Famous <cite title="Cats Fact">Cats Fact</cite></footer>
+        </blockquote>
+    </div>
+    <button type="button" class="btn btn-primary" data-bs-toggle="button" autocomplete="off" onclick="location.href='@Url.Action("GetCat", "Home")'">Get Facts</button>
+</div>
+    </div>
+<br />
+<div class="container">
+<a href="@Url.Action("GetImagesOfDog","Home")" class="btn  btn-dark">You want Images of Dog</a>
+</div>

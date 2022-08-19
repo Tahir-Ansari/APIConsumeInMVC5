@@ -1,0 +1,17 @@
+﻿@model ConsumeAPI.Models.Dogs
+
+@{
+    ViewBag.Title = "GetImagesOfDog";
+}
+
+<div class="container my-4">
+    <div class="card" style="width: 18rem; box-shadow: 10px 10px 12px 1px rgb(128 128 128);">
+        <img src="@Model.Message" class="card-img-top img-fluid" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Images OF Dog</h5>
+            <p class="card-text">Some beatiful dogs picture</p>
+            <a href="@Url.Action("GetImagesOfDog","Home")" class="btn btn-primary">Get New</a>
+            <a href="@Model.Message" class="btn btn-primary" download>Download</a>
+        </div>
+    </div>
+</div>
